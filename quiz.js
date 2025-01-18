@@ -12,7 +12,7 @@ const userAnswer = document.querySelectorAll('input[name="quiz"]:checked').value
 console.log(userAnswer)
 let feedback = document.getElementById('feedback')
 
-if(userAnswer === correctAnswer){
+if (userAnswer === correctAnswer) {
  
 
   feedback.textContent ="Correct! Well done."
