@@ -7,21 +7,26 @@ function checkAnswer () {
   // this  is the correct answer
   const correctAnswer = '4'
 
-  // Get all the radio buttons with the name 'answer'
-const userAnswer = document.querySelectorAll('input[name="quiz"]:checked').value;
-console.log(userAnswer)
+  // Retrieve the user's answer
+  const userAnswer = document.querySelector('input[name="quiz"]:checked').value;
+// console.log(userAnswer)
+
+
+// p tag where result would be displayed
 let feedback = document.getElementById('feedback')
 
+  // Compare the user's answer with the correct answer
 if (userAnswer === correctAnswer) {
- 
-
+  //  if answer is correct
   feedback.textContent ="Correct! Well done."
 } else {
+  // if answer is wrong
    feedback.textContent ="That's incorrect. Try again!"
 }
 
 }
 
+// Add an event listener to the submit button
 document.getElementById('submit-answer').addEventListener('click', checkAnswer)
 
 
@@ -52,3 +57,5 @@ document.getElementById('submit-answer').addEventListener('click', checkAnswer)
 
 // Use document.getElementById to select the “Submit Answer” button by its ID, "submit-answer".
 // Add a click event listener to this button, passing in the checkAnswer function as the callback to be executed when the button is clicked. Ensure you are not calling the checkAnswer function directly in the event listener (i.e., do not add () after the function name in the addEventListener call).
+
+
